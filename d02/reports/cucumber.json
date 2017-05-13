@@ -1,0 +1,34 @@
+[
+  {
+    "keyword": "Feature",
+    "line": 1,
+    "name": "As a developer I want to impersonate a user",
+    "tags": [],
+    "uri": "/home/apaz/code/github.com/calculators/d02/features/Impersonate.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Ensure that the application starts",
+        "tags": [],
+        "id": "as-a-developer-i-want-to-impersonate-a-user;ensure-that-the-application-starts",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "open application",
+            "result": {
+              "status": "passed",
+              "duration": 1072
+            },
+            "line": 3,
+            "match": {
+              "location": "/home/apaz/code/github.com/calculators/d02/features/support/steps.js:8"
+            }
+          }
+        ]
+      }
+    ],
+    "id": "as-a-developer-i-want-to-impersonate-a-user"
+  }
+]
