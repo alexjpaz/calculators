@@ -21,7 +21,7 @@ function D02Calculator() {
     let DO2VO2Ratio = DO2/VO2;
 
     // GRAPH =(((((VO2*X)/10)/Co)/(SaO2/100))/1.34)
-    RequiredHgb = (((((VO2*DesiredDO2VO2ratio)/10)/Co)/(SaO2/100))/1.34);
+    let RequiredHgb = (((((VO2*DesiredDO2VO2ratio)/10)/Co)/(SaO2/100))/1.34);
 
     return {
       DO2: DO2,
