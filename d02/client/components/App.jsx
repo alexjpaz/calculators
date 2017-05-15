@@ -57,6 +57,9 @@ export default class App extends React.Component {
     const end = 6;
     const increment = 0.5;
 
+    const areaStart = 3;
+    const areaEnd = 5;
+
     const VO2 = this.state.result.VO2;
     const Hgb = this.state.vars.Hgb;
     const Co = this.state.vars.Co;
@@ -70,7 +73,7 @@ export default class App extends React.Component {
 
       let area = undefined;
 
-      if(i > 2 && i < 5) {
+      if(i >= 3 && i <= 5) {
         area = y;
       }
 
