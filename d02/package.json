@@ -7,7 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack/default.js",
     "build": "webpack -p --config webpack/default.js",
-    "test": "mocha --recursive client/**/*.spec.js",
+    "test": "mocha --recursive client/**/*.spec.js && nightwatch",
     "testNightwatch": "nightwatch"
   },
   "dependencies": {
