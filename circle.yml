@@ -8,3 +8,7 @@ dependencies:
 test:
   override:
     - cd d02 && npm test
+  post:
+    - mkdir $CIRCLE_ARTIFACTS/reports
+    - mv d02/reports/* $CIRCLE_ARTIFACTS/reports
+

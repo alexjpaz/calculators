@@ -18,7 +18,10 @@ module.exports = {
       "selenium_port"  : 9515,
       "selenium_host"  : "localhost",
 			"default_path_prefix" : "",
-
+      "screenshots": {
+        "enabled": true,
+        "path": "reports/screenshots/selenium"
+      },
       "desiredCapabilities": {
           "browserName": "chrome",
           "chromeOptions" : {
