@@ -20,6 +20,7 @@ module.exports = {
 			"default_path_prefix" : "",
       "screenshots": {
         "enabled": true,
+        "on_failure": true,
         "path": "reports/screenshots/selenium"
       },
       "desiredCapabilities": {
