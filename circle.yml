@@ -1,3 +1,7 @@
+machine:
+  node:
+    version: 6.9.0
+
 dependencies:
   override:
     - cd d02 && npm install
