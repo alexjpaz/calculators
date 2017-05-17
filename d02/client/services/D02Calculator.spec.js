@@ -22,4 +22,21 @@ describe('D02Calculator', () => {
     expect(result.DO2VO2Ratio).to.equal(2.790335749808249);
     expect(result.RequiredHgb).to.equal(19.670830629461392);
   });
+
+  it('should round to the nearest decimals', () => {
+    const calc = new D02Calculator();
+
+    let rounded = calc.round({
+      DO2: 717.2617200000002,
+      VO2: 257.05212000000006,
+      DO2VO2Ratio: 2.790335749808249,
+      RequiredHgb: 19.670830629461392
+    });
+
+    expect(rounded.DO2).to.equal(717.26);
+    expect(rounded.VO2).to.equal(257.05);
+    expect(rounded.DO2VO2Ratio).to.equal(2.8);
+    expect(rounded.RequiredHgb).to.equal(19.7);
+
+  });
 });

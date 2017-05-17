@@ -14,19 +14,32 @@ export default class App extends React.Component {
     this.initVars();
   }
 
+  componentDidMount() {
+    this.updateChart();
+  }
+
   handleSubmit(event) {
     this.setState({value: event.target.value});
   }
 
   handleChange(event) {
     const name = event.target.name;
-    this.state.vars[name] = event.target.value;
+    const value = event.target.value;
+
+    this.state.vars[name] = value;
 
     this.state.result = this.d02Calculator.calculate(this.state.vars);
+
+
 
     this.setState(this.state);
 
     this.updateChart();
+
+    const qp = {};
+    qp[name] = value;
+    Url.set(qp);
+
   }
 
   initVars() {
@@ -47,13 +60,13 @@ export default class App extends React.Component {
     });
 
     this.state.result = this.d02Calculator.calculate(this.state.vars);
+    this.state.roundedResults = this.d02Calculator.round(this.state.result);
 
-    this.updateChart();
   }
 
   updateChart() {
     let dataArray = [];
-    const start = 1
+    const start = 2
     const end = 6;
     const increment = 0.5;
 
@@ -73,7 +86,7 @@ export default class App extends React.Component {
 
       let area = undefined;
 
-      if(i >= 3 && i <= 5) {
+      if(i >= areaStart && i <= areaEnd) {
         area = y;
       }
 
@@ -86,20 +99,40 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className='result'>
-          <form>
-            { this.vars.map((v) => {
-              return <div className='form-group'>
-                <label>
-                  {v}
+      <div className='container'>
+        <h2 className='underlined'>DO2/VO2</h2>
+        <div className='row'>
+          <div className='col-md-4'>
+            <h3>Input values</h3>
+            <form>
+              { this.vars.map((v) => {
+                return <div className='form-group' key={v}>
+                  <label>{v}</label>
                   <input type="text" name={v} value={this.state.vars[v]} onChange={this.handleChange} className='form-control'/>
-                </label>
-              </div>
-            }) }
-          </form>
+                </div>
+              }) }
+            </form>
+          </div>
+          <div className='col-md-8'>
+            <h3>Outputs</h3>
+            <table className='table table-condensed table-striped'>
+              <tbody>
+                  { Object.keys(this.state.roundedResults).map(r => {
+                    return (
+                      <tr>
+                        <th>{r}</th>
+                        <td>{this.state.roundedResults[r]}</td>
+                      </tr>
+                    )
+                  })}
+              </tbody>
+            </table>
+            <div id="chart_div"></div>
+          </div>
         </div>
-        <h3><pre>{ JSON.stringify(this.state.result, null, 4) }</pre></h3>
+        <div>
+
+        </div>
       </div>
     );
   }

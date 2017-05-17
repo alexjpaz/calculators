@@ -30,6 +30,15 @@ function D02Calculator() {
       RequiredHgb: RequiredHgb
     };
   };
+
+  this.round = function(results) {
+    return {
+      DO2: Math.round(results.DO2*100)/100,
+      VO2: Math.round(results.VO2*100)/100,
+      DO2VO2Ratio: Math.round(results.DO2VO2Ratio*10)/10,
+      RequiredHgb: Math.round(results.RequiredHgb*10)/10,
+    }
+  };
 }
 
 module.exports = D02Calculator;
