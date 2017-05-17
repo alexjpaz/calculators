@@ -7,7 +7,7 @@ dependencies:
     - cd d02 && npm install
 test:
   override:
-    - cd d02 && xvfb-run npm test
+    - cd d02 && xvfb-run -a npm test
   post:
     - mkdir $CIRCLE_ARTIFACTS/reports
     - mv d02/reports/* $CIRCLE_ARTIFACTS/reports
