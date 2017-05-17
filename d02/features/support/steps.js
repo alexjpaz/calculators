@@ -7,7 +7,8 @@ const config = {
 defineSupportCode(({Given, Then, When}) => {
   Given(/^open application$/i, () => {
     return client
-      .url(`http://localhost:8080/`)
+      //.url(`http://localhost:8080/`)
+      .url(`http://google.com/`)
       .waitForElementVisible('#container', 5000);
   });
 
