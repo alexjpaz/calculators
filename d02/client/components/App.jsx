@@ -101,7 +101,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className='container'>
-        <h2 className='underlined'>D<sub>O2</sub>/V<sub>O2</sub> Calculator</h2>
+        <h2 className='underlined'>{i18n("applicationTitle")}</h2>
         <div className='row'>
           <div className='col-md-4'>
             <h3>Input values</h3>

@@ -32,10 +32,10 @@ window.drawChart = function(dataArray) {
     title: 'Hgb Needed for DO2/VO2',
     legend: { position: 'bottom' },
     hAxis: {
-      title: 'Hgb',
+      title: 'DO2 / VO2 Ratio',
     },
     vAxis: {
-      title: 'DO2 / VO2 Ratio',
+      title: 'Hgb',
     },
     series: {
       0: {

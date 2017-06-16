@@ -1,16 +1,17 @@
 const mustache = require('mustache');
 
 const res = {
-  "Co": "Cₒ₂",
-  "DO2": "Current Dₒ₂",
-  "VO2": "Current Vₒ₂",
-  "DO2VO2Ratio": "Current Dₒ₂/Vₒ₂Ratio",
-  "SaO2": "Saₒ₂",
-  "PaO2": "Paₒ₂",
-  "SvO2": "Svₒ₂",
-  "PvO2": "Pvₒ₂ (if unknown, leave as zero)",
-  "DesiredDO2VO2ratio": "Desired Dₒ₂/Vₒ₂ ratio",
-  "RequiredHgb": "Hgb required for Dₒ₂/Vₒ₂ ratio of {{vars.DesiredDO2VO2ratio}}"
+  "applicationTitle": "DO₂ / VO₂ Calculator",
+  "Co": "CO",
+  "DO2": "Current DO₂",
+  "VO2": "Current VO₂",
+  "DO2VO2Ratio": "Current DO₂ / VO₂Ratio",
+  "SaO2": "SaO₂",
+  "PaO2": "PaO₂",
+  "SvO2": "SvO₂",
+  "PvO2": "PvO₂ (if unknown, leave as zero)",
+  "DesiredDO2VO2ratio": "Desired DO₂ / VO₂ ratio",
+  "RequiredHgb": "Hgb required for DO₂ / VO₂ ratio of {{vars.DesiredDO2VO2ratio}}"
 };
 
 
