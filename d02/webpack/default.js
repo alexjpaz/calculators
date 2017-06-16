@@ -11,7 +11,7 @@ module.exports = {
   entry: './client/index.js',
   output: {
     path: path.resolve('dist'),
-    filename: 'index_bundle.js'
+    filename: `index_bundle.js?_=${new Date().getTime()}`
   },
   module: {
     loaders: [
