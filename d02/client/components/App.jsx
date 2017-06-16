@@ -2,6 +2,8 @@ import React from 'react';
 import D02Calculator from '../services/D02Calculator';
 import Url from '../services/Url';
 
+import i18n from '../services/i18n';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -29,8 +31,7 @@ export default class App extends React.Component {
     this.state.vars[name] = value;
 
     this.state.result = this.d02Calculator.calculate(this.state.vars);
-
-
+    this.state.roundedResults = this.d02Calculator.round(this.state.result);
 
     this.setState(this.state);
 
@@ -100,14 +101,14 @@ export default class App extends React.Component {
   render() {
     return (
       <div className='container'>
-        <h2 className='underlined'>DO2/VO2</h2>
+        <h2 className='underlined'>D<sub>O2</sub>/V<sub>O2</sub> Calculator</h2>
         <div className='row'>
           <div className='col-md-4'>
             <h3>Input values</h3>
             <form>
               { this.vars.map((v) => {
                 return <div className='form-group' key={v}>
-                  <label>{v}</label>
+                  <label>{i18n(v)}</label>
                   <input type="text" name={v} value={this.state.vars[v]} onChange={this.handleChange} className='form-control'/>
                 </div>
               }) }
@@ -120,7 +121,7 @@ export default class App extends React.Component {
                   { Object.keys(this.state.roundedResults).map(r => {
                     return (
                       <tr>
-                        <th>{r}</th>
+                        <th>{i18n(r, this.state)}</th>
                         <td>{this.state.roundedResults[r]}</td>
                       </tr>
                     )
