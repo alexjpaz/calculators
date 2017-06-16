@@ -5,7 +5,7 @@ const res = {
   "Co": "CO",
   "DO2": "Current DO₂",
   "VO2": "Current VO₂",
-  "DO2VO2Ratio": "Current DO₂ / VO₂Ratio",
+  "DO2VO2Ratio": "Current DO₂ / VO₂ Ratio",
   "SaO2": "SaO₂",
   "PaO2": "PaO₂",
   "SvO2": "SvO₂",
