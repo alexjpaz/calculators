@@ -79,7 +79,7 @@ export default class App extends React.Component {
     const Co = this.state.vars.Co;
     const SaO2 = this.state.vars.SaO2;
 
-    dataArray.push(['DO2/VO2 Ratio', 'HgB', 'HgB',  { role: 'annotation' }])
+    dataArray.push(['DO2/VO2 Ratio', 'HgB', 'Optimal Hgb Range',  { role: 'annotation' }])
 
     for(let i=start;i<=end;i+=increment) {
       let x = i;

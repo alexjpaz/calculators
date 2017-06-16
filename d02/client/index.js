@@ -31,6 +31,12 @@ window.drawChart = function(dataArray) {
     chartArea:{left:20,top:10,width:"100%",height:"80%"},
     title: 'Hgb Needed for DO2/VO2',
     legend: { position: 'bottom' },
+    hAxis: {
+      title: 'Hgb',
+    },
+    vAxis: {
+      title: 'DO2 / VO2 Ratio',
+    },
     series: {
       0: {
         pointSize: 6,
