@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "chai": "^3.5.0",
-    "chromedriver": "^2.29.0",
+    "chromedriver": "2.27.0",
     "config": "^1.25.1",
     "cucumber": "^2.0.0-rc.9",
     "html-webpack-plugin": "^2.28.0",

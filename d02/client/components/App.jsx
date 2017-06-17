@@ -91,7 +91,7 @@ export default class App extends React.Component {
         area = y;
       }
 
-      dataArray.push([i, y, area, area]);
+      dataArray.push([i, y, area, Math.round(y*10)/10]);
     }
 
 

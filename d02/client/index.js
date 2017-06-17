@@ -33,8 +33,10 @@ window.drawChart = function(dataArray) {
     legend: { position: 'bottom' },
     hAxis: {
       title: 'DO2 / VO2 Ratio',
+      textPosition: 'in',
     },
     vAxis: {
+      textPosition: 'in',
       title: 'Hgb',
     },
     series: {
